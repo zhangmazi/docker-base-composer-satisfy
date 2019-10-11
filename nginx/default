@@ -5,6 +5,8 @@ server {
 
     # Make site accessible from http://set-ip-address.xip.io
     server_name localhost;
+    
+    index default.html default.htm default.php index.html index.htm index.php;
 
     access_log /var/log/nginx/satisfy-access.log;
     error_log  /var/log/nginx/satisfy-error.log error;
