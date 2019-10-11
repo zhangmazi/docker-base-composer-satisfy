@@ -87,11 +87,11 @@ RUN composer config -g repo.packagist composer https://mirrors.aliyun.com/compos
     && composer install -vvv \
     && chmod -R 777 /satisfy
 
-ADD supervisor/4-ttyd.conf /etc/supervisor/conf.d/4-ttyd.conf
+# ADD supervisor/4-ttyd.conf /etc/supervisor/conf.d/4-ttyd.conf
 
 WORKDIR /app
 
-CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+CMD ["/bin/bash"]
 
 EXPOSE 80
 EXPOSE 443
